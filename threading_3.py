@@ -379,6 +379,7 @@ class InterruptibleDispersionCalculator:
     def _get_m_io(self, row_data):
         """Create Model_Interface object"""
         m_io = Model_Interface()
+        m_io.set_inputs_as_arguments()
         m_io.material = row_data['material']
         m_io.flashresult = row_data['flashresult']
         m_io.inputs['chemical_mix'] = [row_data['cas_no']]
@@ -965,8 +966,8 @@ if __name__ == "__main__":
         flash_workers=6, 
         dispersion_workers=4, 
         timeout_minutes=15,
-        memory_threshold_gb=7.0,
-        memory_warning_gb=6.5,
+        memory_threshold_gb=30,
+        memory_warning_gb=29,
         batch_size=100,
         max_ready_queue_size=500
     )
