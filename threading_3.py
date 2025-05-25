@@ -30,6 +30,7 @@ from py_lopa.phast_io.phast_prep import prep_state, flash_calc
 from py_lopa.calcs.thermo_pio import vpress_pa_and_vapor_phase_comp_and_component_vapor_pressures
 from py_lopa.model_interface import Model_Interface
 
+csv_lock = threading.Lock()
 
 @dataclass
 class FlashSpec:
@@ -670,20 +671,23 @@ class ProductionAsyncDispersionRunner:
         
         try:
 
-            csv_lock = threading.Lock()   
-            with open(self.output_file, 'a', newline='') as f:
-                writer = csv.DictWriter(f, fieldnames=list(self.output_buffer[0].keys()))
-                
-                if not self.header_written:
-                    if self.resume_from_idx < 0:
+            
+            f = open(self.output_file, 'a', newline='')
+            writer = csv.DictWriter(f, fieldnames=list(self.output_buffer[0].keys()))
+            
+            if not self.header_written:
+                if self.resume_from_idx < 0:
+                    with csv_lock:
                         writer.writeheader()
-                    self.header_written = True
-                
+                self.header_written = True
+            with csv_lock:
                 writer.writerows(self.output_buffer)
-                
-                max_idx = max(row.get('idx', -1) for row in self.output_buffer)
-                if max_idx >= 0:
-                    self._update_idx(max_idx)
+            
+            f.close()
+            
+            max_idx = max(row.get('idx', -1) for row in self.output_buffer)
+            if max_idx >= 0:
+                self._update_idx(max_idx)
             
             self.output_buffer.clear()
             
