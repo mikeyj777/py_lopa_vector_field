@@ -966,8 +966,8 @@ if __name__ == "__main__":
         flash_workers=6, 
         dispersion_workers=4, 
         timeout_minutes=15,
-        memory_threshold_gb=30,
-        memory_warning_gb=29,
-        batch_size=100,
+        memory_threshold_gb=7.5,
+        memory_warning_gb=6,
+        batch_size=3,
         max_ready_queue_size=500
     )
