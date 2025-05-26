@@ -1,0 +1,736 @@
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+
+    return ([tick.label1.get_window_extent(renderer)
+    raise KeyboardInterrupt("Calculation interrupted")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt: Calculation interrupted
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\text.py", line 958, in get_window_extent
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+Exception in thread Thread-25 (calculation_thread):
+Traceback (most recent call last):
+    x, y = self.get_transform().transform((x, y))
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\transforms.py", line 1495, in transform
+KeyboardInterrupt: Calculation interrupted
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+Exception in thread Thread-26 (calculation_thread):
+Traceback (most recent call last):
+    self._target(*self._args, **self._kwargs)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    res = self.transform_affine(self.transform_non_affine(values))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\_api\deprecation.py", line 297, in wrapper
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    raise KeyboardInterrupt("Calculation interrupted")
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+KeyboardInterrupt: Calculation interrupted
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    return func(*args, **kwargs)
+Exception in thread Thread-27 (calculation_thread):
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\transforms.py", line 2409, in transform_affine
+Traceback (most recent call last):
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+KeyboardInterrupt: Calculation interrupted
+model:  Dispersion.  messages:  ['UDM3 2006: An observer has been dispersed past its normal stopping point to 1519.42 [m]', 'UDM3 2006: An observer has been dispersed past its normal stopping point to 1073.75 [m]']
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Dispersion.  Release Duration: 10 min. Runtime: 6.378894 sec. Current time: 2025-05-25 23:45:14.965978+00:00 UTC. Status: Completed OK.
+    return self.get_affine().transform(values)
+
+    self.run()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\transforms.py", line 2437, in get_affine
+
+***
+
+Initiating Model:  Max Conc Distance at Elevation near 0 m.  Conc: 200.0 ppm  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Exception in thread Thread-28 (calculation_thread):
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self._a.get_affine().get_matrix()))
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self.run()
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\transforms.py", line 2258, in get_affine
+    raise KeyboardInterrupt("Calculation interrupted")
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt: Calculation interrupted
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    if self._x == self._y:
+Exception in thread Thread-29 (calculation_thread):
+       ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\transforms.py", line 1779, in __eq__
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    raise KeyboardInterrupt("Calculation interrupted")
+    return (self.get_matrix() == other.get_matrix()).all()
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\transforms.py", line 1575, in get_matrix
+KeyboardInterrupt: Calculation interrupted
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    return self.get_affine().get_matrix()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\transforms.py", line 2436, in get_affine
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+Exception in thread Thread-31 (calculation_thread):
+Traceback (most recent call last):
+model:  Dispersion.  messages:  ['UDM3 2006: An observer has been dispersed past its normal stopping point to 1567.39 [m]', 'UDM3 2006: An observer has been dispersed past its normal stopping point to 1056.65 [m]']
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Dispersion.  Release Duration: 4 min. Runtime: 6.053395 sec. Current time: 2025-05-25 23:45:16.956366+00:00 UTC. Status: Completed OK.
+
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+
+***
+
+Initiating Model:  Max Conc Distance at Elevation near 0 m.  Conc: 200.0 ppm
+Exception in thread Thread-30 (calculation_thread):
+    return Affine2D(np.dot(self._b.get_affine().get_matrix(),
+Traceback (most recent call last):
+                           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\py_lopa_vector_field\venv\Lib\site-packages\matplotlib\transforms.py", line 2436, in get_affine
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self.run()
+    self._target(*self._args, **self._kwargs)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    return Affine2D(np.dot(self._b.get_affine().get_matrix(),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+    self._target(*self._args, **self._kwargs)
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+KeyboardInterrupt: Calculation interrupted
+2025-05-25 19:58:52,445 - INFO - Progress [0.6h] - Flash: 242/30508 (393/hr), Disp: 0 (0/hr), Pending: 15968833, Ready: 500, Memory: 7.9GB (stable)
+2025-05-25 19:58:52,445 - INFO - Progress [0.6h] - Flash: 242/30508 (393/hr), Disp: 0 (0/hr), Pending: 15968833, Ready: 500, Memory: 7.9GB (stable)
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+2025-05-25 19:58:52,497 - WARNING - Timeouts: 2
+Exception in thread Thread-32 (calculation_thread):
+2025-05-25 19:58:52,497 - WARNING - Timeouts: 2
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Exception in thread Thread-33 (calculation_thread):
+Traceback (most recent call last):
+2025-05-25 19:58:53,454 - WARNING - Dispersion disp_001586 timed out
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+2025-05-25 19:58:53,454 - WARNING - Dispersion disp_001586 timed out
+    self.run()
+2025-05-25 19:58:54,186 - WARNING - Dispersion disp_001587 timed out
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+Exception in thread Thread-34 (calculation_thread):
+2025-05-25 19:58:54,186 - WARNING - Dispersion disp_001587 timed out
+Traceback (most recent call last):
+    self.run()
+    self._target(*self._args, **self._kwargs)
+Exception in thread Thread-35 (calculation_thread):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+    self._target(*self._args, **self._kwargs)
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self.run()
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    result = self._run_dispersion(disp_spec, flashresult)
+    self._target(*self._args, **self._kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+KeyboardInterrupt: Calculation interrupted
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    result = self._run_dispersion(disp_spec, flashresult)
+    self._target(*self._args, **self._kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Exception in thread Thread-36 (calculation_thread):
+    raise KeyboardInterrupt("Calculation interrupted")
+Traceback (most recent call last):
+KeyboardInterrupt: Calculation interrupted
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    raise KeyboardInterrupt("Calculation interrupted")
+Exception in thread Thread-37 (calculation_thread):
+KeyboardInterrupt: Calculation interrupted
+    raise KeyboardInterrupt("Calculation interrupted")
+    self.run()
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+KeyboardInterrupt: Calculation interrupted
+Exception in thread Thread-38 (calculation_thread):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self._target(*self._args, **self._kwargs)
+Exception in thread Thread-39 (calculation_thread):
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    self._target(*self._args, **self._kwargs)
+    self.run()
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    self.run()
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+KeyboardInterrupt: Calculation interrupted
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+Exception in thread Thread-40 (calculation_thread):
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    raise KeyboardInterrupt("Calculation interrupted")
+    result = self._run_dispersion(disp_spec, flashresult)
+    self._target(*self._args, **self._kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    self.run()
+KeyboardInterrupt: Calculation interrupted
+    result = self._run_dispersion(disp_spec, flashresult)
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Distance at Elevation near 0 m.  Conc: 200.0 ppm.  Release Duration: 4 min. Runtime: 821.107122 sec. Current time: 2025-05-25 23:58:58.103290+00:00 UTC. Status: Completed OK.
+
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Distance at Elevation near 0 m.  Conc: 200.0 ppm.  Release Duration: 10 min. Runtime: 823.356081 sec. Current time: 2025-05-25 23:58:58.368942+00:00 UTC. Status: Completed OK.
+    raise KeyboardInterrupt("Calculation interrupted")
+
+
+***
+
+Initiating Model:  Max Conc Distance at Elevation near 3 m.  Conc: 200.0 ppm
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+
+***
+
+Initiating Model:  Max Conc Distance at Elevation near 3 m.  Conc: 200.0 ppm
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt: Calculation interrupted
+    raise KeyboardInterrupt("Calculation interrupted")
+Exception in thread Thread-41 (calculation_thread):
+KeyboardInterrupt: Calculation interrupted
+Traceback (most recent call last):
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Exception in thread Thread-43 (calculation_thread):
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    result = self._run_dispersion(disp_spec, flashresult)
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    result = self._run_dispersion(disp_spec, flashresult)
+    self.run()
+Exception in thread Thread-42 (calculation_thread):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    raise KeyboardInterrupt("Calculation interrupted")
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+KeyboardInterrupt: Calculation interrupted
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Exception in thread Thread-44 (calculation_thread):
+Traceback (most recent call last):
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Exception in thread Thread-45 (calculation_thread):
+    result = self._run_dispersion(disp_spec, flashresult)
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self._target(*self._args, **self._kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    result = self._run_dispersion(disp_spec, flashresult)
+    raise KeyboardInterrupt("Calculation interrupted")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt: Calculation interrupted
+    result = self._run_dispersion(disp_spec, flashresult)
+    self.run()
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    raise KeyboardInterrupt("Calculation interrupted")
+Exception in thread Thread-46 (calculation_thread):
+KeyboardInterrupt: Calculation interrupted
+Traceback (most recent call last):
+    self._target(*self._args, **self._kwargs)
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+KeyboardInterrupt: Calculation interrupted
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self.run()
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+Exception in thread Thread-48 (calculation_thread):
+Traceback (most recent call last):
+    self._target(*self._args, **self._kwargs)
+Exception in thread Thread-47 (calculation_thread):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    result = self._run_dispersion(disp_spec, flashresult)
+    self.run()
+Exception in thread Thread-49 (calculation_thread):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+Traceback (most recent call last):
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    raise KeyboardInterrupt("Calculation interrupted")
+    result = self._run_dispersion(disp_spec, flashresult)
+    self._target(*self._args, **self._kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    result = self._run_dispersion(disp_spec, flashresult)
+KeyboardInterrupt: Calculation interrupted
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise KeyboardInterrupt("Calculation interrupted")
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt: Calculation interrupted
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+Exception in thread Thread-51 (calculation_thread):
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Exception in thread Thread-50 (calculation_thread):
+Exception in thread Thread-52 (calculation_thread):
+Traceback (most recent call last):
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Distance at Elevation near 3 m.  Conc: 200.0 ppm.  Release Duration: 4 min. Runtime: 5.06286 sec. Current time: 2025-05-25 23:59:03.369290+00:00 UTC. Status: Completed OK.
+
+
+***
+
+Initiating Model:  Max Conc Distance at Elevation near 6 m.  Conc: 200.0 ppm
+Traceback (most recent call last):
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Distance at Elevation near 3 m.  Conc: 200.0 ppm.  Release Duration: 10 min. Runtime: 5.294709 sec. Current time: 2025-05-25 23:59:03.694904+00:00 UTC. Status: Completed OK.
+
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    result = self._run_dispersion(disp_spec, flashresult)
+Traceback (most recent call last):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+***
+
+Initiating Model:  Max Conc Distance at Elevation near 6 m.  Conc: 200.0 ppm
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    self.run()
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+KeyboardInterrupt: Calculation interrupted
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self.run()
+    self._target(*self._args, **self._kwargs)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    self._target(*self._args, **self._kwargs)
+Exception in thread Thread-53 (calculation_thread):
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    self.run()
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    result = self._run_dispersion(disp_spec, flashresult)
+Exception in thread Thread-54 (calculation_thread):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+Traceback (most recent call last):
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Exception in thread Thread-55 (calculation_thread):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+KeyboardInterrupt: Calculation interrupted
+Exception in thread Thread-56 (calculation_thread):
+    raise KeyboardInterrupt("Calculation interrupted")
+    self.run()
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt: Calculation interrupted
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+Traceback (most recent call last):
+Exception in thread Thread-57 (calculation_thread):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self.run()
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self._target(*self._args, **self._kwargs)
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+KeyboardInterrupt: Calculation interrupted
+    result = self._run_dispersion(disp_spec, flashresult)
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Distance at Elevation near 6 m.  Conc: 200.0 ppm.  Release Duration: 4 min. Runtime: 3.982652 sec. Current time: 2025-05-25 23:59:07.427511+00:00 UTC. Status: Completed OK.
+
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+***
+
+Initiating Model:  Max Conc Footprint at Elevation near 0 m.  Conc: 1000.0 ppm             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+model:  Max Conc Distance at Elevation near 6 m.  Conc: 200.0 ppm.  messages:  ['CONSEQ_API 1004: Calculated concentrations always below requested contour level of 0.200000E-03 [kmol/m3]']
+    raise KeyboardInterrupt("Calculation interrupted")
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Distance at Elevation near 6 m.  Conc: 200.0 ppm.  Release Duration: 10 min. Runtime: 4.063249 sec. Current time: 2025-05-25 23:59:07.805029+00:00 UTC. Status: Completed OK.
+
+Exception in thread Thread-58 (calculation_thread):
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+
+***
+
+Initiating Model:  Max Conc Footprint at Elevation near 0 m.  Conc: 1000.0 ppm    raise KeyboardInterrupt("Calculation interrupted")
+
+KeyboardInterrupt: Calculation interrupted
+KeyboardInterrupt: Calculation interrupted
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+Exception in thread Thread-60 (calculation_thread):
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Traceback (most recent call last):
+KeyboardInterrupt: Calculation interrupted
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+2025-05-25 19:59:08,744 - INFO - Progress [0.6h] - Flash: 276/34677 (445/hr), Disp: 0 (0/hr), Pending: 18151584, Ready: 498, Memory: 7.9GB (stable)
+Exception in thread Thread-61 (calculation_thread):
+Exception in thread Thread-59 (calculation_thread):
+    result = self._run_dispersion(disp_spec, flashresult)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+2025-05-25 19:59:08,744 - INFO - Progress [0.6h] - Flash: 276/34677 (445/hr), Disp: 0 (0/hr), Pending: 18151584, Ready: 498, Memory: 7.9GB (stable)
+    self.run()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+2025-05-25 19:59:10,268 - WARNING - Timeouts: 4
+    raise KeyboardInterrupt("Calculation interrupted")
+2025-05-25 19:59:10,268 - WARNING - Timeouts: 4
+KeyboardInterrupt: Calculation interrupted
+    self._target(*self._args, **self._kwargs)
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+Exception in thread Thread-62 (calculation_thread):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+Traceback (most recent call last):
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self._target(*self._args, **self._kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    result = self._run_dispersion(disp_spec, flashresult)
+    self.run()
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+KeyboardInterrupt: Calculation interrupted
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    self._target(*self._args, **self._kwargs)
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+KeyboardInterrupt: Calculation interrupted
+Exception in thread Thread-63 (calculation_thread):
+Traceback (most recent call last):
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Exception in thread Thread-65 (calculation_thread):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception in thread Thread-64 (calculation_thread):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    raise KeyboardInterrupt("Calculation interrupted")
+    self.run()
+KeyboardInterrupt: Calculation interrupted
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self.run()
+Exception in thread Thread-66 (calculation_thread):
+model:  Max Conc Footprint at Elevation near 0 m.  Conc: 1000.0 ppm.  messages:  ['CVIEW 2004: Minimum distance for vertical AWD calculations set to 10.2190 [m] to prevent near-field overestimation']
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Footprint at Elevation near 0 m.  Conc: 1000.0 ppm.  Release Duration: 4 min. Runtime: 5.692285 sec. Current time: 2025-05-25 23:59:13.248852+00:00 UTC. Status: Completed OK.
+Traceback (most recent call last):
+
+model:  Max Conc Footprint at Elevation near 0 m.  Conc: 1000.0 ppm.  messages:  ['CVIEW 2004: Minimum distance for vertical AWD calculations set to 10.3479 [m] to prevent near-field overestimation']
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Footprint at Elevation near 0 m.  Conc: 1000.0 ppm.  Release Duration: 10 min. Runtime: 5.475081 sec. Current time: 2025-05-25 23:59:13.342610+00:00 UTC. Status: Completed OK.
+
+
+***
+
+Initiating Model:  Max Conc Footprint at Elevation near 3 m.  Conc: 1000.0 ppm    self._target(*self._args, **self._kwargs)
+
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+
+***
+
+Initiating Model:  Max Conc Footprint at Elevation near 3 m.  Conc: 1000.0 ppm
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    self._target(*self._args, **self._kwargs)
+    self.run()
+    result = self._run_dispersion(disp_spec, flashresult)
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+    raise KeyboardInterrupt("Calculation interrupted")
+KeyboardInterrupt: Calculation interrupted
+KeyboardInterrupt: Calculation interrupted
+Exception in thread Thread-67 (calculation_thread):
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+Exception in thread Thread-69 (calculation_thread):
+Exception in thread Thread-68 (calculation_thread):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Traceback (most recent call last):
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+KeyboardInterrupt: Calculation interrupted
+Traceback (most recent call last):
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self.run()
+Exception in thread Thread-70 (calculation_thread):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+Traceback (most recent call last):
+    self.run()
+    self._target(*self._args, **self._kwargs)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    self._target(*self._args, **self._kwargs)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self._target(*self._args, **self._kwargs)
+    result = self._run_dispersion(disp_spec, flashresult)
+    self.run()
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    self._target(*self._args, **self._kwargs)
+model:  Max Conc Footprint at Elevation near 3 m.  Conc: 1000.0 ppm.  messages:  ['CVIEW 2004: Minimum distance for vertical AWD calculations set to 7.78041 [m] to prevent near-field overestimation']
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Footprint at Elevation near 3 m.  Conc: 1000.0 ppm.  Release Duration: 4 min. Runtime: 5.087257 sec. Current time: 2025-05-25 23:59:18.382989+00:00 UTC. Status: Completed OK.
+
+model:  Max Conc Footprint at Elevation near 3 m.  Conc: 1000.0 ppm.  messages:  ['CVIEW 2004: Minimum distance for vertical AWD calculations set to 7.89450 [m] to prevent near-field overestimation']
+
+***
+
+Initiating Model:  Max Conc Footprint at Elevation near 6 m.  Conc: 1000.0 ppm***Weather Condition:  night.  Hazard Type: inhalation.  Model: Max Conc Footprint at Elevation near 3 m.  Conc: 1000.0 ppm.  Release Duration: 10 min. Runtime: 5.055988 sec. Current time: 2025-05-25 23:59:18.492367+00:00 UTC. Status: Completed OK.
+    raise KeyboardInterrupt("Calculation interrupted")
+
+
+    result = self._run_dispersion(disp_spec, flashresult)
+
+***
+
+Initiating Model:  Max Conc Footprint at Elevation near 6 m.  Conc: 1000.0 ppm
+    result = self._run_dispersion(disp_spec, flashresult)
+KeyboardInterrupt: Calculation interrupted
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+KeyboardInterrupt: Calculation interrupted
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+KeyboardInterrupt: Calculation interrupted
+Exception in thread Thread-71 (calculation_thread):
+    raise KeyboardInterrupt("Calculation interrupted")
+Exception in thread Thread-72 (calculation_thread):
+KeyboardInterrupt: Calculation interrupted
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Exception in thread Thread-73 (calculation_thread):
+Traceback (most recent call last):
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Traceback (most recent call last):
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+Exception in thread Thread-74 (calculation_thread):
+    self._target(*self._args, **self._kwargs)
+    self.run()
+    self.run()
+Traceback (most recent call last):
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+    result = self._run_dispersion(disp_spec, flashresult)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+    self.run()
+  File "C:\python\python3_12_1\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+KeyboardInterrupt: Calculation interrupted
+    result = self._run_dispersion(disp_spec, flashresult)
+    self._target(*self._args, **self._kwargs)
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+    self._target(*self._args, **self._kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\py_lopa_vector_field\threading_3.py", line 323, in calculation_thread
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+Exception in thread Thread-75 (calculation_thread):
+    result = self._run_dispersion(disp_spec, flashresult)
+Traceback (most recent call last):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise KeyboardInterrupt("Calculation interrupted")
+    result = self._run_dispersion(disp_spec, flashresult)
+  File "C:\python\python3_12_1\Lib\threading.py", line 1073, in _bootstrap_inner
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+KeyboardInterrupt: Calculation interrupted
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise KeyboardInterrupt("Calculation interrupted")
+  File "C:\py_lopa_vector_field\threading_3.py", line 369, in _run_dispersion
+Exception in thread Thread-76 (calculation_thread):
+KeyboardInterrupt: Calculation interrupted
+Traceback (most recent call last):
