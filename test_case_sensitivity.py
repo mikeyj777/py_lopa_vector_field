@@ -69,7 +69,7 @@ def model_run_for_solver(x0, args):
     return ans
 
 
-def solve_for_dist_at_conc(m_io):
+def solve_for_dists_at_concs(m_io):
     output = []
     args = {
         'm_io' : m_io,
@@ -99,7 +99,7 @@ def main():
     for _, row in test_cases_df.iterrows():
         starting_inputs['temp_deg_c'] = row['temp_c']
         m_io = get_m_io(row)
-        chem_results = solve_for_dist_at_conc(m_io)
+        chem_results = solve_for_dists_at_concs(m_io)
         output.extend(chem_results)
         if len(output) == 0:
             continue
@@ -109,6 +109,4 @@ def main():
                 writer.writerows(output)
                 output = []
         except Exception as e:
-            print(f"Could not write results to file.  will attempt to write next time.  current results in buffer: \n\n\n{output}")
-
-
+            print(f"Could not write results to file.  Will attempt to write next time.  \ncurrent results in buffer: \n{output}")
