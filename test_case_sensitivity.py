@@ -48,9 +48,9 @@ def parse_m_io(m_io, target_category):
     if target_category == cd.CAT_SERIOUS:
         targ_conc_volf *= 10 # 10xERPG-3 for Serious
     for rel_dur_sec, pd_at_dur in phast_disp_dict.items():
-        for wx, pd_at_dur_at_wx in pd_at_dur[rel_dur_sec].items():
-            for haz, pd_at_dur_at_wx_at_haz in pd_at_dur_at_wx[wx].items():
-                p_disp = pd_at_dur_at_wx_at_haz[haz]
+        for wx, pd_at_dur_at_wx in pd_at_dur.items():
+            for haz, pd_at_dur_at_wx_at_haz in pd_at_dur_at_wx.items():
+                p_disp = pd_at_dur_at_wx_at_haz
                 flattening = Flattening(conc_pfls=p_disp.conc_profiles)
                 dist_m = flattening.calc_max_dist_at_conc(targ_conc_volf=targ_conc_volf, min_ht_m=0, max_ht_m=6)
 
