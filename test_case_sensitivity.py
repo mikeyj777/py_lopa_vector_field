@@ -11,7 +11,7 @@ from py_lopa.model_interface import Model_Interface
 from py_lopa.classes.solver import Solver
 
 cd = Consts().CONSEQUENCE_DATA
-cheminfo = helpers(Tables().CHEM_INFO)
+cheminfo = helpers.get_dataframe_from_csv(Tables().CHEM_INFO)
 test_cases_df = pd.read_csv('heuristing_testing_output.csv')
 
 starting_inputs = {
@@ -29,7 +29,7 @@ targ_dists = {
 def get_m_io(row):
     m_io = Model_Interface()
     m_io.set_inputs_as_arguments()
-    m_io.inputs['chem_mix'] = row['chem_mix']
+    m_io.inputs['chemical_mix'] = row['chem_mix']
     m_io.inputs['temp_deg_c'] = row['temp_c']
     m_io.inputs['pressure_psig'] = 100
     m_io.inputs['release_elevation_m'] = 0
@@ -110,3 +110,6 @@ def main():
                 output = []
         except Exception as e:
             print(f"Could not write results to file.  Will attempt to write next time.  \ncurrent results in buffer: \n{output}")
+
+if __name__ == '__main__':
+    main()

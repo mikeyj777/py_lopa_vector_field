@@ -1,8 +1,8 @@
- chem_mix , nbp (deg C) , temp_c , serious_impact_distance_m , serious_impact_area_m2 , moderate_impact_distance_m , moderate_impact_area_m2 
- trifluoroiodomethane , (21.78), 42.97 , 134.21 ," 23,658.09 ", 570.89 ," 126,894.04 "
- acetaldehyde , 21.00 , 21.00 , 98.39 ," 20,310.78 ", 449.64 ," 122,481.04 "
- n-pentyl acetate , 147.71 , 147.71 , 19.15 , 179.68 , 4.14 ," 2,019.88 "
- 1-nitropropane , 131.34 , 131.34 , 16.40 , 179.71 , 96.50 ," 2,834.34 "
- benzene , 80.13 , 80.13 , 49.19 ," 3,248.49 ", 197.79 ," 28,147.53 "
- 3-heptanone , 147.06 , 147.06 , 16.78 , 96.53 , 11.74 ," 1,998.85 "
- isopentyl acetate , 141.66 , 141.66 , 14.13 , 448.19 , 66.11 ," 2,794.16 "
+chem_mix,nbp_deg_c,temp_c,serious_impact_distance_m,serious_impact_area_m2,moderate_impact_distance_m,moderate_impact_area_m2
+trifluoroiodomethane,-21.78,42.97,134.21,23658.09,570.89,126894.04
+acetaldehyde,21,21,98.39,20310.78,449.64,122481.04
+n-pentyl acetate,147.71,147.71,19.15,179.68,4.14,2019.88
+1-nitropropane,131.34,131.34,16.4,179.71,96.5,2834.34
+benzene,80.13,80.13,49.19,3248.49,197.79,28147.53
+3-heptanone,147.06,147.06,16.78,96.53,11.74,1998.85
+isopentyl acetate,141.66,141.66,14.13,448.19,66.11,2794.16
