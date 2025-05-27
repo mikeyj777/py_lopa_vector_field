@@ -58,7 +58,7 @@ targ_dists = {
 def get_m_io(row):
     m_io = Model_Interface()
     m_io.set_inputs_as_arguments()
-    m_io.inputs['chemical_mix'] = row['chem_mix'].values
+    m_io.inputs['chemical_mix'] = helpers.get_data_from_pandas_series_element(row['chem_mix'])
     m_io.inputs['flash_fire'] = False
     m_io.inputs['bldg_hts_low_med_high'] = [0,0,0]
     for starting_input_dict in starting_inputs_list:
@@ -87,7 +87,8 @@ def parse_m_io(m_io, target_category):
 
 def model_run_for_solver(x0, args):
     target_input = args['target_input']
-    m_io = args['m_io']
+    row = args['row']
+    m_io = get_m_io(row)
     target_category = args['target_category']
     m_io.inputs[target_input] = x0
     res = m_io.run()
@@ -96,10 +97,10 @@ def model_run_for_solver(x0, args):
     dist_m = parse_m_io(m_io, target_category=target_category)
     return dist_m
 
-def solve_for_dists_at_concs(m_io):
+def solve_for_dists_at_concs(row):
     output = []
     args = {
-        'm_io' : m_io,
+        'row' : row,
     }
     for target_category in targ_dists.keys():
         target_distance = targ_dists[target_category]
@@ -111,27 +112,26 @@ def solve_for_dists_at_concs(m_io):
             ll = parameter_data['lower_bound']
             ul = parameter_data['upper_bound']
 
-            solver = Solver(arg_to_vary=x0, fxn_to_solve=model_run_for_solver, args=args, target=target_distance)
+            solver = Solver(arg_to_vary=x0, fxn_to_solve=model_run_for_solver, args=args, target=target_distance, ytol=1)
             solver.set_bisect_parameters(lower_limit=ll, upper_limit=ul, initial_value=x0)
             solver.verify_bounds()
             try:
-                if solver.solve():
+                if solver.solver_bisect():
                     output.append({
-                        'chem_mix': m_io['chem_mix'],
+                        'chem_mix': row['chem_mix'],
                         'target_category': target_category,
                         'target_input' : target_input,
                         'value': solver.answer
                     })
             except Exception as e:
-                print(f"{m_io.inputs['chemical_mix']} could not be solved for {target_category} over {target_input}.  Error: {e.args} ")
+                print(f"{row['chem_mix']} could not be solved for {target_category} over {target_input}.  Error: {e.args} ")
                 continue
     return output
 
 def main():
     output = []
     for _, row in test_cases_df.iterrows():
-        m_io = get_m_io(row)
-        chem_results = solve_for_dists_at_concs(m_io)
+        chem_results = solve_for_dists_at_concs(row)
         output.extend(chem_results)
         if len(output) == 0:
             continue
