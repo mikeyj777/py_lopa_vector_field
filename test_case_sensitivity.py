@@ -17,12 +17,38 @@ test_cases_df = pd.read_csv('heuristing_testing_output.csv')
 
 moderate_conc_ppm = 1000  # test cases run for chemicals with ERPG-3 at 1000 ppm
 
-starting_inputs = {
-    'storage_mass_kg' : 10000 / 2.2,
-    'pressure_psig' : 100,
-    'release_elevation_m' : 0,
-    'max_hole_size_in' : 5,
-}
+starting_inputs_list = [
+    {   
+        'parameter': 'storage_mass_kg',
+        'initial_value': 10000 / 2.2,
+        'lower_bound': 10,
+        'upper_bound': 10000000,
+    },
+    {   
+        'parameter' : 'pressure_psig',
+        'initial_value' : 100,
+        'lower_bound' : 0.1,
+        'upper_bound' : 1000,
+    },
+    {   
+        'parameter' : 'release_elevation_m',
+        'initial_value': 0,
+        'lower_bound' : 0,
+        'upper_bound' : 20,
+    },
+    {   
+        'parameter': 'max_hole_size_in',
+        'initial_value' : 5,
+        'lower_bound' : 0.1,
+        'upper_bound' : 50,
+    },
+    {
+        'parameter' : 'temp_deg_c',
+        'initial_value' : None,
+        'lower_bound' : -150,
+        'upper_bound' : 800
+    }
+]
 
 targ_dists = {
     cd.CAT_SERIOUS : 100, # distance to control rooms
@@ -32,14 +58,17 @@ targ_dists = {
 def get_m_io(row):
     m_io = Model_Interface()
     m_io.set_inputs_as_arguments()
-    m_io.inputs['chemical_mix'] = row['chem_mix']
-    m_io.inputs['temp_deg_c'] = row['temp_c']
-    m_io.inputs['pressure_psig'] = 100
-    m_io.inputs['release_elevation_m'] = 0
+    m_io.inputs['chemical_mix'] = row['chem_mix'].values
     m_io.inputs['flash_fire'] = False
-    m_io.inputs['max_hole_size_in'] = 5
     m_io.inputs['bldg_hts_low_med_high'] = [0,0,0]
-    m_io.inputs['storage_mass_kg'] = 10000 / 2.2
+    for starting_input_dict in starting_inputs_list:
+        param = starting_input_dict['parameter']
+        if param == 'temp_deg_c':
+            starting_input_dict['initial_value'] = helpers.get_data_from_pandas_series_element(row['temp_c'])
+        value = starting_input_dict['initial_value']
+        
+        m_io.inputs[param] = value
+    
     return m_io
 
 def parse_m_io(m_io, target_category):
@@ -75,10 +104,16 @@ def solve_for_dists_at_concs(m_io):
     for target_category in targ_dists.keys():
         target_distance = targ_dists[target_category]
         args['target_category'] = target_category
-        for target_input in starting_inputs.keys():
+        for parameter_data in starting_inputs_list:
+            target_input = parameter_data['parameter']
             args['target_input'] = target_input
-            x0 = starting_inputs[target_input]
+            x0 = parameter_data['initial_value']
+            ll = parameter_data['lower_bound']
+            ul = parameter_data['upper_bound']
+
             solver = Solver(arg_to_vary=x0, fxn_to_solve=model_run_for_solver, args=args, target=target_distance)
+            solver.set_bisect_parameters(lower_limit=ll, upper_limit=ul, initial_value=x0)
+            solver.verify_bounds()
             try:
                 if solver.solve():
                     output.append({
@@ -95,7 +130,6 @@ def solve_for_dists_at_concs(m_io):
 def main():
     output = []
     for _, row in test_cases_df.iterrows():
-        starting_inputs['temp_deg_c'] = row['temp_c']
         m_io = get_m_io(row)
         chem_results = solve_for_dists_at_concs(m_io)
         output.extend(chem_results)
