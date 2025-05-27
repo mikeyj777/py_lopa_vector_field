@@ -104,7 +104,7 @@ def main():
         if len(output) == 0:
             continue
         try:
-            with open('sensitivity_output.csv', newline='') as csv_file:
+            with open('sensitivity_output.csv', 'a', newline='') as csv_file:
                 writer = csv.DictWriter(f=csv_file, fieldnames=list(chem_results[-1].keys()))
                 writer.writerows(output)
                 output = []
