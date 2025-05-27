@@ -114,7 +114,8 @@ def solve_for_dists_at_concs(row):
 
             solver = Solver(arg_to_vary=x0, fxn_to_solve=model_run_for_solver, args=args, target=target_distance, ytol=1)
             solver.set_bisect_parameters(lower_limit=ll, upper_limit=ul, initial_value=x0)
-            solver.verify_bounds()
+            if solver.verify_bounds() is None or not solver.verify_bounds():
+                continue
             try:
                 if solver.solver_bisect():
                     output.append({
