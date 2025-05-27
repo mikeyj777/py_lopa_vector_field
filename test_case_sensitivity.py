@@ -9,10 +9,13 @@ from py_lopa.calcs.consts import Consts
 from py_lopa.data.tables import Tables
 from py_lopa.model_interface import Model_Interface
 from py_lopa.classes.solver import Solver
+from py_lopa.calcs.flattening import Flattening
 
 cd = Consts().CONSEQUENCE_DATA
 cheminfo = helpers.get_dataframe_from_csv(Tables().CHEM_INFO)
 test_cases_df = pd.read_csv('heuristing_testing_output.csv')
+
+moderate_conc_ppm = 1000  # test cases run for chemicals with ERPG-3 at 1000 ppm
 
 starting_inputs = {
     'storage_mass_kg' : 10000 / 2.2,
@@ -39,22 +42,19 @@ def get_m_io(row):
     m_io.inputs['storage_mass_kg'] = 10000 / 2.2
     return m_io
 
-def parse_m_io(m_io):
-    ca_dict = m_io.mc.ca_dict
+def parse_m_io(m_io, target_category):
+    phast_disp_dict = m_io.mc.phast_disp
+    targ_conc_volf = moderate_conc_ppm * 1e-6
+    if target_category == cd.CAT_SERIOUS:
+        targ_conc_volf *= 10 # 10xERPG-3 for Serious
+    for rel_dur_sec, pd_at_dur in phast_disp_dict.items():
+        for wx, pd_at_dur_at_wx in pd_at_dur[rel_dur_sec].items():
+            for haz, pd_at_dur_at_wx_at_haz in pd_at_dur_at_wx[wx].items():
+                p_disp = pd_at_dur_at_wx_at_haz[haz]
+                flattening = Flattening(conc_pfls=p_disp.conc_profiles)
+                dist_m = flattening.calc_max_dist_at_conc(targ_conc_volf=targ_conc_volf, min_ht_m=0, max_ht_m=6)
 
-    # self.ca_dict[release_duration_sec][wx][haz] = copy.deepcopy(ca.consequence_list)
-    output = {}
-    for rel_dur_sec, ca_data_at_dur in ca_dict.items():
-        for wx, ca_at_dur_at_wx in ca_data_at_dur[rel_dur_sec].items():
-            for haz, ca_at_dur_at_wx_at_haz in ca_at_dur_at_wx[wx].items():
-                ca = ca_at_dur_at_wx_at_haz[haz]
-                conseq_list = ca.conseq_list
-                for con_dict in conseq_list:
-                    if con_dict[cd.CAT_TITLE] in [cd.CAT_SERIOUS, cd.CAT_MODERATE]:
-                        output[f'{con_dict[cd.CAT_TITLE]}_{cd.IMPACT_DISTANCE_M}'] = con_dict[cd.IMPACT_DISTANCE_M]
-                        output[f'{con_dict[cd.CAT_TITLE]}_{cd.IMPACT_AREA_M2}'] = con_dict[cd.IMPACT_AREA_M2]
-                        
-    return output
+    return dist_m
 
 def model_run_for_solver(x0, args):
     target_input = args['target_input']
@@ -64,10 +64,8 @@ def model_run_for_solver(x0, args):
     res = m_io.run()
     if res != ResultCode.SUCCESS:
         return None
-    output = parse_m_io(m_io)
-    ans = output[f'{target_category}_{cd.IMPACT_DISTANCE_M}']
-    return ans
-
+    dist_m = parse_m_io(m_io, target_category=target_category)
+    return dist_m
 
 def solve_for_dists_at_concs(m_io):
     output = []
@@ -90,7 +88,7 @@ def solve_for_dists_at_concs(m_io):
                         'value': solver.answer
                     })
             except Exception as e:
-                print(f"{m_io.inputs['chem_mix']} could not be solved for {target_category} over {target_input}.  Error: {e.args} ")
+                print(f"{m_io.inputs['chemical_mix']} could not be solved for {target_category} over {target_input}.  Error: {e.args} ")
                 continue
     return output
 
