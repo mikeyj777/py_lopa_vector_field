@@ -1,0 +1,215 @@
+trifluoroiodomethane,serious,storage_mass_kg,4132.231404958677,43.0548893633266
+trifluoroiodomethane,serious,storage_mass_kg,4545.454545454545,43.0548893633266
+trifluoroiodomethane,serious,storage_mass_kg,5000.0,43.0548893633266
+trifluoroiodomethane,serious,pressure_psig,90.9090909090909,40.93536683483144
+trifluoroiodomethane,serious,pressure_psig,100,43.0548893633266
+trifluoroiodomethane,serious,pressure_psig,110.00000000000001,17.72763049667292
+trifluoroiodomethane,serious,release_elevation_m,2,23.046753552064498
+trifluoroiodomethane,serious,release_elevation_m,3,43.0548893633266
+trifluoroiodomethane,serious,release_elevation_m,4,7.24824128462666
+trifluoroiodomethane,serious,max_hole_size_in,4.545454545454545,38.89895197340787
+trifluoroiodomethane,serious,max_hole_size_in,5,43.0548893633266
+trifluoroiodomethane,serious,max_hole_size_in,5.5,48.14546984988227
+trifluoroiodomethane,serious,temp_deg_k,287.3818181818182,258.822836322951
+trifluoroiodomethane,serious,temp_deg_k,316.12,258.822836322951
+trifluoroiodomethane,serious,temp_deg_k,347.732,258.822836322951
+trifluoroiodomethane,moderate,storage_mass_kg,4132.231404958677,306.34832891785044
+trifluoroiodomethane,moderate,storage_mass_kg,4545.454545454545,258.822836322951
+trifluoroiodomethane,moderate,storage_mass_kg,5000.0,6.767901106306774
+trifluoroiodomethane,moderate,pressure_psig,90.9090909090909,251.1439110235128
+trifluoroiodomethane,moderate,pressure_psig,100,258.822836322951
+trifluoroiodomethane,moderate,pressure_psig,110.00000000000001,13.585093295880792
+trifluoroiodomethane,moderate,release_elevation_m,2,319.53773264735656
+trifluoroiodomethane,moderate,release_elevation_m,3,258.822836322951
+trifluoroiodomethane,moderate,release_elevation_m,4,258.822836322951
+trifluoroiodomethane,moderate,max_hole_size_in,4.545454545454545,322.75919041724285
+trifluoroiodomethane,moderate,max_hole_size_in,5,258.822836322951
+trifluoroiodomethane,moderate,max_hole_size_in,5.5,11.06127612044472
+trifluoroiodomethane,moderate,temp_deg_k,287.3818181818182,258.822836322951
+trifluoroiodomethane,moderate,temp_deg_k,316.12,258.822836322951
+trifluoroiodomethane,moderate,temp_deg_k,347.732,258.822836322951
+acetaldehyde,serious,storage_mass_kg,4132.231404958677,1.3631606937057952
+acetaldehyde,serious,storage_mass_kg,4545.454545454545,1.3396468519259912
+acetaldehyde,serious,storage_mass_kg,5000.0,180.27224187515122
+acetaldehyde,serious,pressure_psig,90.9090909090909,1.2704998375324061
+acetaldehyde,serious,pressure_psig,100,1.3396468519259912
+n-pentyl acetate,serious,storage_mass_kg,4132.231404958677,5.171858449883555
+n-pentyl acetate,serious,storage_mass_kg,4545.454545454545,5.171858449883555
+n-pentyl acetate,serious,storage_mass_kg,5000.0,5.171858449883555
+n-pentyl acetate,serious,pressure_psig,90.9090909090909,4.9298564185911475
+n-pentyl acetate,serious,pressure_psig,100,5.171858449883555
+n-pentyl acetate,serious,pressure_psig,110.00000000000001,5.359819522601832
+n-pentyl acetate,serious,release_elevation_m,2,2.254374202889671
+n-pentyl acetate,serious,release_elevation_m,3,5.171858449883555
+n-pentyl acetate,serious,release_elevation_m,4,95.54410977284468
+n-pentyl acetate,serious,max_hole_size_in,4.545454545454545,5.753088798531287
+n-pentyl acetate,serious,max_hole_size_in,5,5.171858449883555
+n-pentyl acetate,serious,max_hole_size_in,5.5,4.5845284642760555
+n-pentyl acetate,serious,temp_deg_k,382.59999999999997,9.59095145243378
+n-pentyl acetate,serious,temp_deg_k,420.86,9.59095145243378
+n-pentyl acetate,serious,temp_deg_k,462.946,9.59095145243378
+n-pentyl acetate,moderate,storage_mass_kg,4132.231404958677,9.59095145243378
+n-pentyl acetate,moderate,storage_mass_kg,4545.454545454545,9.59095145243378
+n-pentyl acetate,moderate,storage_mass_kg,5000.0,178.46855293183248
+n-pentyl acetate,moderate,pressure_psig,90.9090909090909,10.822446851646363
+n-pentyl acetate,moderate,pressure_psig,100,9.59095145243378
+n-pentyl acetate,moderate,pressure_psig,110.00000000000001,8.299866079483586
+n-pentyl acetate,moderate,release_elevation_m,2,12.329771603195779
+n-pentyl acetate,moderate,release_elevation_m,3,9.59095145243378
+n-pentyl acetate,moderate,release_elevation_m,4,2.8574255306969745
+n-pentyl acetate,moderate,max_hole_size_in,4.545454545454545,147.41315910257674
+n-pentyl acetate,moderate,max_hole_size_in,5,9.59095145243378
+n-pentyl acetate,moderate,max_hole_size_in,5.5,8.207330865882252
+n-pentyl acetate,moderate,temp_deg_k,382.59999999999997,9.59095145243378
+n-pentyl acetate,moderate,temp_deg_k,420.86,9.59095145243378
+n-pentyl acetate,moderate,temp_deg_k,462.946,9.59095145243378
+1-nitropropane,serious,storage_mass_kg,4132.231404958677,3.2631145151688186
+1-nitropropane,serious,storage_mass_kg,4545.454545454545,82.93141691026888
+1-nitropropane,serious,storage_mass_kg,5000.0,105.69774243245082
+1-nitropropane,serious,pressure_psig,90.9090909090909,3.0959554040711765
+1-nitropropane,serious,pressure_psig,100,82.93141691026888
+1-nitropropane,serious,pressure_psig,110.00000000000001,3.392945680918757
+1-nitropropane,serious,release_elevation_m,2,59.94671756962223
+1-nitropropane,serious,release_elevation_m,3,82.93141691026888
+1-nitropropane,serious,release_elevation_m,4,106.91924196067062
+1-nitropropane,serious,max_hole_size_in,4.545454545454545,102.29556234865991
+1-nitropropane,serious,max_hole_size_in,5,82.93141691026888
+1-nitropropane,serious,max_hole_size_in,5.5,112.29556234865991
+1-nitropropane,serious,temp_deg_k,367.7181818181818,8.974182454814724
+1-nitropropane,serious,temp_deg_k,404.49,8.974182454814724
+1-nitropropane,serious,temp_deg_k,444.939,8.974182454814724
+1-nitropropane,moderate,storage_mass_kg,4132.231404958677,216.02227542494765
+1-nitropropane,moderate,storage_mass_kg,4545.454545454545,8.974182454814724
+1-nitropropane,moderate,storage_mass_kg,5000.0,206.02227542494765
+1-nitropropane,moderate,pressure_psig,90.9090909090909,9.485569724727576
+1-nitropropane,moderate,pressure_psig,100,8.974182454814724
+1-nitropropane,moderate,pressure_psig,110.00000000000001,8.115716393040305
+1-nitropropane,moderate,release_elevation_m,2,9.59095145243378
+1-nitropropane,moderate,release_elevation_m,3,8.974182454814724
+1-nitropropane,moderate,release_elevation_m,4,3.2206958169965523
+1-nitropropane,moderate,max_hole_size_in,4.545454545454545,10.023176380641601
+1-nitropropane,moderate,max_hole_size_in,5,8.974182454814724
+1-nitropropane,moderate,max_hole_size_in,5.5,8.025013499434122
+1-nitropropane,moderate,temp_deg_k,367.7181818181818,8.974182454814724
+1-nitropropane,moderate,temp_deg_k,404.49,8.974182454814724
+1-nitropropane,moderate,temp_deg_k,444.939,8.974182454814724
+benzene,serious,storage_mass_kg,4132.231404958677,2.9749016274947486
+benzene,serious,storage_mass_kg,4545.454545454545,2.9749016274947486
+benzene,serious,storage_mass_kg,5000.0,2.9353506954704733
+benzene,serious,pressure_psig,90.9090909090909,120.63066388583033
+benzene,serious,pressure_psig,100,2.9749016274947486
+benzene,serious,pressure_psig,110.00000000000001,144.47438165361004
+benzene,serious,release_elevation_m,2,3.2631145151688186
+benzene,serious,release_elevation_m,3,2.9749016274947486
+benzene,serious,release_elevation_m,4,4.9894524663831135
+benzene,serious,max_hole_size_in,4.545454545454545,3.437095519003665
+benzene,serious,max_hole_size_in,5,2.9749016274947486
+benzene,serious,max_hole_size_in,5.5,2.4556134647626764
+benzene,serious,temp_deg_k,321.16363636363633,22.103866858722185
+benzene,serious,temp_deg_k,353.28,22.103866858722185
+benzene,serious,temp_deg_k,388.608,22.103866858722185
+benzene,moderate,storage_mass_kg,4132.231404958677,313.1906602856945
+benzene,moderate,storage_mass_kg,4545.454545454545,22.103866858722185
+benzene,moderate,storage_mass_kg,5000.0,251.1439110235128
+benzene,moderate,pressure_psig,90.9090909090909,23.288427443094555
+benzene,moderate,pressure_psig,100,22.103866858722185
+benzene,moderate,pressure_psig,110.00000000000001,309.5377326473563
+benzene,moderate,release_elevation_m,2,229.44218346064218
+benzene,moderate,release_elevation_m,3,22.103866858722185
+benzene,moderate,release_elevation_m,4,329.2995599096489
+benzene,moderate,max_hole_size_in,4.545454545454545,306.34832891785044
+benzene,moderate,max_hole_size_in,5,22.103866858722185
+benzene,moderate,max_hole_size_in,5.5,20.327557162026903
+benzene,moderate,temp_deg_k,321.16363636363633,22.103866858722185
+benzene,moderate,temp_deg_k,353.28,22.103866858722185
+benzene,moderate,temp_deg_k,388.608,22.103866858722185
+3-heptanone,serious,storage_mass_kg,4132.231404958677,95.54410977284468
+3-heptanone,serious,storage_mass_kg,4545.454545454545,95.54410977284468
+3-heptanone,serious,storage_mass_kg,5000.0,95.54410977284468
+3-heptanone,serious,pressure_psig,90.9090909090909,4.754602676005731
+3-heptanone,serious,pressure_psig,100,95.54410977284468
+3-heptanone,serious,pressure_psig,110.00000000000001,99.48414963638939
+3-heptanone,serious,release_elevation_m,2,89.92181851052962
+3-heptanone,serious,release_elevation_m,3,95.54410977284468
+3-heptanone,serious,release_elevation_m,4,63.07152259993664
+3-heptanone,serious,max_hole_size_in,4.545454545454545,90.83559797815683
+3-heptanone,serious,max_hole_size_in,5,95.54410977284468
+3-heptanone,serious,max_hole_size_in,5.5,63.07152259993664
+3-heptanone,serious,temp_deg_k,382.00909090909084,7.331137487687693
+3-heptanone,serious,temp_deg_k,420.21,7.331137487687693
+3-heptanone,serious,temp_deg_k,462.231,7.331137487687693
+3-heptanone,moderate,storage_mass_kg,4132.231404958677,7.331137487687693
+3-heptanone,moderate,storage_mass_kg,4545.454545454545,7.331137487687693
+3-heptanone,moderate,storage_mass_kg,5000.0,7.331137487687693
+3-heptanone,moderate,pressure_psig,90.9090909090909,8.58308916676438
+3-heptanone,moderate,pressure_psig,100,7.331137487687693
+3-heptanone,moderate,pressure_psig,110.00000000000001,6.099327065156633
+3-heptanone,moderate,release_elevation_m,2,10.473040742794833
+3-heptanone,moderate,release_elevation_m,3,7.331137487687693
+3-heptanone,moderate,release_elevation_m,4,1.4843225333848165
+3-heptanone,moderate,max_hole_size_in,4.545454545454545,154.67035487372974
+3-heptanone,moderate,max_hole_size_in,5,7.331137487687693
+3-heptanone,moderate,max_hole_size_in,5.5,6.0286875805892945
+3-heptanone,moderate,temp_deg_k,382.00909090909084,7.331137487687693
+3-heptanone,moderate,temp_deg_k,420.21,7.331137487687693
+3-heptanone,moderate,temp_deg_k,462.231,7.331137487687693
+isopentyl acetate,serious,storage_mass_kg,4132.231404958677,5.11044743223061
+isopentyl acetate,serious,storage_mass_kg,4545.454545454545,98.94717245212352
+isopentyl acetate,serious,storage_mass_kg,5000.0,5.11044743223061
+isopentyl acetate,serious,pressure_psig,90.9090909090909,4.8708533613826015
+isopentyl acetate,serious,pressure_psig,100,98.94717245212352
+isopentyl acetate,serious,pressure_psig,110.00000000000001,101.16825266780927
+isopentyl acetate,serious,release_elevation_m,2,2.2219926385284996
+isopentyl acetate,serious,release_elevation_m,3,98.94717245212352
+isopentyl acetate,serious,release_elevation_m,4,93.58498557711422
+isopentyl acetate,serious,max_hole_size_in,4.545454545454545,5.6858944422792685
+isopentyl acetate,serious,max_hole_size_in,5,98.94717245212352
+isopentyl acetate,serious,max_hole_size_in,5.5,107.85317980741603
+isopentyl acetate,serious,temp_deg_k,377.0999999999999,10.023176380641601
+isopentyl acetate,serious,temp_deg_k,414.80999999999995,10.023176380641601
+isopentyl acetate,serious,temp_deg_k,456.291,10.023176380641601
+isopentyl acetate,moderate,storage_mass_kg,4132.231404958677,10.133961145065307
+isopentyl acetate,moderate,storage_mass_kg,4545.454545454545,10.023176380641601
+isopentyl acetate,moderate,storage_mass_kg,5000.0,9.913493943041976
+isopentyl acetate,moderate,pressure_psig,90.9090909090909,11.06127612044472
+isopentyl acetate,moderate,pressure_psig,100,10.023176380641601
+isopentyl acetate,moderate,pressure_psig,110.00000000000001,213.86286770433543
+isopentyl acetate,moderate,release_elevation_m,2,12.065824440934563
+isopentyl acetate,moderate,release_elevation_m,3,10.023176380641601
+isopentyl acetate,moderate,release_elevation_m,4,183.93418407068356
+isopentyl acetate,moderate,max_hole_size_in,4.545454545454545,197.34342540938135
+isopentyl acetate,moderate,max_hole_size_in,5,10.023176380641601
+isopentyl acetate,moderate,max_hole_size_in,5.5,8.776680409528907
+isopentyl acetate,moderate,temp_deg_k,377.0999999999999,10.023176380641601
+isopentyl acetate,moderate,temp_deg_k,414.80999999999995,10.023176380641601
+isopentyl acetate,moderate,temp_deg_k,456.291,10.023176380641601
+acetaldehyde,serious,storage_mass_kg,4132.231404958677,1.3631606937057952
+acetaldehyde,serious,storage_mass_kg,4545.454545454545,1.3396468519259912
+acetaldehyde,serious,storage_mass_kg,5000.0,180.27224187515122
+acetaldehyde,serious,pressure_psig,90.9090909090909,1.2704998375324061
+acetaldehyde,serious,pressure_psig,100,1.3396468519259912
+acetaldehyde,serious,pressure_psig,110.00000000000001,1.4108997064172102
+acetaldehyde,serious,release_elevation_m,2,169.71576832132297
+acetaldehyde,serious,release_elevation_m,3,1.3396468519259912
+acetaldehyde,serious,release_elevation_m,4,2.9749016274947486
+acetaldehyde,serious,max_hole_size_in,4.545454545454545,1.7456010150169163
+acetaldehyde,serious,max_hole_size_in,5,1.3396468519259912
+acetaldehyde,serious,max_hole_size_in,5.5,158.01711804488733
+acetaldehyde,serious,temp_deg_k,267.4090909090909,291.9494299225507
+acetaldehyde,serious,temp_deg_k,294.15,291.9494299225507
+acetaldehyde,serious,temp_deg_k,323.565,291.9494299225507
+acetaldehyde,moderate,storage_mass_kg,4132.231404958677,25.049537142518336
+acetaldehyde,moderate,storage_mass_kg,4545.454545454545,291.9494299225507
+acetaldehyde,moderate,storage_mass_kg,5000.0,384.4403681553241
+acetaldehyde,moderate,pressure_psig,90.9090909090909,26.112638920657883
+acetaldehyde,moderate,pressure_psig,100,291.9494299225507
+acetaldehyde,moderate,pressure_psig,110.00000000000001,376.61012423778374
+acetaldehyde,moderate,release_elevation_m,2,356.8092417088529
+acetaldehyde,moderate,release_elevation_m,3,291.9494299225507
+acetaldehyde,moderate,release_elevation_m,4,303.90492295690876
+acetaldehyde,moderate,max_hole_size_in,4.545454545454545,26.660350558516747
+acetaldehyde,moderate,max_hole_size_in,5,291.9494299225507
+acetaldehyde,moderate,max_hole_size_in,5.5,294.8936206404841
+acetaldehyde,moderate,temp_deg_k,267.4090909090909,32.44826778394491
+acetaldehyde,moderate,temp_deg_k,294.15,291.9494299225507
+acetaldehyde,moderate,temp_deg_k,323.565,2.126768365186156

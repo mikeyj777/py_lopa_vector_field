@@ -13,7 +13,7 @@ from py_lopa.calcs.flattening import Flattening
 
 cd = Consts().CONSEQUENCE_DATA
 cheminfo = helpers.get_dataframe_from_csv(Tables().CHEM_INFO)
-test_cases_df = pd.read_csv('heuristing_testing_output.csv')
+test_cases_df = pd.read_csv('sensitivity_testing_inputs.csv')
 
 moderate_conc_ppm = 1000  # test cases run for chemicals with ERPG-3 at 1000 ppm
 
@@ -97,125 +97,80 @@ def get_m_io(row):
     
     return m_io
 
-def parse_m_io(m_io, target_category):
+def parse_m_io(m_io):
     phast_disp_dict = m_io.mc.phast_disp
     targ_conc_volf = moderate_conc_ppm * 1e-6
-    if target_category == cd.CAT_SERIOUS:
-        targ_conc_volf *= 10 # 10xERPG-3 for Serious
-    for rel_dur_sec, pd_at_dur in phast_disp_dict.items():
-        for wx, pd_at_dur_at_wx in pd_at_dur.items():
-            for haz, pd_at_dur_at_wx_at_haz in pd_at_dur_at_wx.items():
-                p_disp = pd_at_dur_at_wx_at_haz
-                flattening = Flattening(conc_pfls=p_disp.conc_profiles)
-                dist_m = flattening.calc_max_dist_at_conc(targ_conc_volf=targ_conc_volf, min_ht_m=0, max_ht_m=6)
+    for target_category in targ_dists.keys():
+        for rel_dur_sec, pd_at_dur in phast_disp_dict.items():
+            for wx, pd_at_dur_at_wx in pd_at_dur.items():
+                for haz, pd_at_dur_at_wx_at_haz in pd_at_dur_at_wx.items():
+                    p_disp = pd_at_dur_at_wx_at_haz
+                    flattening = Flattening(conc_pfls=p_disp.conc_profiles)
+                    moderate_dist_m = flattening.calc_max_dist_at_conc(targ_conc_volf=targ_conc_volf, min_ht_m=0, max_ht_m=6)
+                    serious_dist_m = flattening.calc_max_dist_at_conc(targ_conc_volf=targ_conc_volf*10, min_ht_m=0, max_ht_m=6)
 
-    return dist_m
+    return {
+        cd.CAT_MODERATE : moderate_dist_m,
+        cd.CAT_SERIOUS : serious_dist_m,
+    }
 
 def model_run_for_solver(x0, args):
-    target_input = args['target_input']
+    parameter_to_vary = args['parameter_to_vary']
     row = args['row']
     m_io = get_m_io(row)
-    target_category = args['target_category']
     adding_factor = 0
-    if target_input == 'temp_deg_k':
-        target_category = 'temp_deg_c'
+    if parameter_to_vary == 'temp_deg_k':
+        parameter_to_vary = 'temp_deg_c'
         adding_factor = -273.15
-    m_io.inputs[target_input] = x0 + adding_factor
+    m_io.inputs[parameter_to_vary] = x0 + adding_factor
     res = m_io.run()
     if res != ResultCode.SUCCESS:
         return None
-    dist_m = parse_m_io(m_io, target_category=target_category)
-    return dist_m
+    dists_m = parse_m_io(m_io)
+    return dists_m
 
 def get_sensitivity_around_init_values(row):
     output = []
     args = {
         'row' : row,
     }
-    for target_category in targ_dists.keys():
-        args['target_category'] = target_category
-        for parameter_data in starting_inputs_list:
-            args['parameter_data'] = parameter_data
-            target_input = parameter_data['parameter']
-            args['target_input'] = target_input
-            increment_operation = parameter_data['increment_operation']
-            increment_factor = parameter_data['increment_factor']
-            x0 = parameter_data['initial_value']
-            xhigh = increment_operation(x0, increment_factor)
-            xlow = increment_operation(x0, increment_factor, inverse = True)
-        
-            for x in [xlow, x0, xhigh]:
-                try:
-                    dist_m = model_run_for_solver(x0=x, args=args)
-                    output.append({
-                        'chem_mix': row['chem_mix'],
-                        'target_category': target_category,
-                        'target_input' : target_input,
-                        'input': x,
-                        'value': dist_m,
-                    })
-                    print(output)
-                except Exception as e:
-                        print(f"{row['chem_mix']} could not be solved for {target_category} over {target_input} at {x}.  Error: {e.args} ")
-                        continue
-                
-                try:
-                    with open('sensitivity_output.csv', 'a', newline='') as csv_file:
-                        writer = csv.DictWriter(f=csv_file, fieldnames=list(output[-1].keys()))
-                        writer.writerows(output)
-                        output = []
-                except Exception as e:
-                    print(f"Could not write results to file.  Will attempt to write next time.  \ncurrent results in buffer: \n{output}")
-    return output
-
-def solve_for_dists_at_concs(row):
-    output = []
-    args = {
-        'row' : row,
-    }
-    for target_category in targ_dists.keys():
-        target_distance = targ_dists[target_category]
-        args['target_category'] = target_category
-        for parameter_data in starting_inputs_list:
-            args['parameter_data'] = parameter_data
-            target_input = parameter_data['parameter']
-            args['target_input'] = target_input
-            x0 = parameter_data['initial_value']
-            ll = parameter_data['lower_bound']
-            ul = parameter_data['upper_bound']
-
-            solver = Solver(arg_to_vary=x0, fxn_to_solve=model_run_for_solver, args=args, target=target_distance, ytol=1)
-            solver.set_bisect_parameters(lower_limit=ll, upper_limit=ul, initial_value=x0)
-            if solver.verify_bounds() is None or not solver.verify_bounds():
-                continue
+    
+    for parameter_data in starting_inputs_list:
+        args['parameter_data'] = parameter_data
+        parameter_to_vary = parameter_data['parameter']
+        args['parameter_to_vary'] = parameter_to_vary
+        x0 = parameter_data['initial_value']
+        xlow = x0 - 1
+        xhigh = x0 + 1
+        for x in [xlow, x0, xhigh]:
             try:
-                if solver.solver_bisect():
-                    output.append({
-                        'chem_mix': row['chem_mix'],
-                        'target_category': target_category,
-                        'target_input' : target_input,
-                        'value': solver.answer
-                    })
+                dists_m = model_run_for_solver(x0=x, args=args)
+                output.append({
+                    'chem_mix': row['chem_mix'],
+                    'parameter_to_vary' : parameter_to_vary,
+                    'parameter_value': x,
+                    'moderate_dist_m': dists_m[cd.CAT_MODERATE],
+                    'serious_dist_m': dists_m[cd.CAT_SERIOUS],
+                })
+                print(output)
             except Exception as e:
-                print(f"{row['chem_mix']} could not be solved for {target_category} over {target_input}.  Error: {e.args} ")
-                continue
-
+                    print(f"{row['chem_mix']} could not be solved over {parameter_to_vary} at {x}.  Error: {e.args} ")
+                    continue
+            
+            try:
+                with open('sensitivity_output.csv', 'a', newline='') as csv_file:
+                    writer = csv.DictWriter(f=csv_file, fieldnames=list(output[-1].keys()))
+                    writer.writerows(output)
+                    output = []
+            except Exception as e:
+                print(f"Could not write results to file.  Will attempt to write next time.  \ncurrent results in buffer: \n{output}")
     return output
+
 
 def main():
     # output = []
     for _, row in test_cases_df.iterrows():
         get_sensitivity_around_init_values(row)
-        # output.extend(chem_results)
-        # if len(output) == 0:
-        #     continue
-        # try:
-        #     with open('sensitivity_output.csv', 'a', newline='') as csv_file:
-        #         writer = csv.DictWriter(f=csv_file, fieldnames=list(chem_results[-1].keys()))
-        #         writer.writerows(output)
-        #         output = []
-        # except Exception as e:
-        #     print(f"Could not write results to file.  Will attempt to write next time.  \ncurrent results in buffer: \n{output}")
-
+        
 if __name__ == '__main__':
     main()
