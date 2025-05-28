@@ -1,4 +1,6 @@
 import csv
+import concurrent.futures
+import time
 import pandas as pd
 import numpy as np
 
@@ -78,6 +80,19 @@ targ_dists = {
     cd.CAT_MODERATE : 200, # distance to offsite
 }
 
+def run_with_timeout(m_io, executor, timeout_seconds = 180):
+    result = None
+    future = executor.submit(m_io.run)
+    try:
+        result = future.result(timeout=timeout_seconds)
+    except concurrent.futures.TimeoutError as e:
+        print(f'timeout error: {e}')
+    except Exception as e:
+        print(f"function did not complete.  Error type: {type(e).__name__}.  descr: {e.args}")
+    
+    return result
+
+
 def get_m_io(row):
     m_io = Model_Interface()
     m_io.set_inputs_as_arguments()
@@ -114,7 +129,7 @@ def parse_m_io(m_io):
         cd.CAT_SERIOUS : serious_dist_m,
     }
 
-def model_run_for_solver(x0, args):
+def model_run_for_solver(x0, args, executor):
     parameter_to_vary = args['parameter_to_vary']
     row = args['row']
     m_io = get_m_io(row)
@@ -123,13 +138,13 @@ def model_run_for_solver(x0, args):
         parameter_to_vary = 'temp_deg_c'
         adding_factor = -273.15
     m_io.inputs[parameter_to_vary] = x0 + adding_factor
-    res = m_io.run()
+    res = run_with_timeout(m_io=m_io, executor=executor)
     if res != ResultCode.SUCCESS:
         return None
     dists_m = parse_m_io(m_io)
     return dists_m
 
-def get_sensitivity_around_init_values(row):
+def get_sensitivity_around_init_values(row, executor):
     output = []
     args = {
         'row' : row,
@@ -144,9 +159,10 @@ def get_sensitivity_around_init_values(row):
         xhigh = x0 + 1
         for x in [xlow, x0, xhigh]:
             try:
-                dists_m = model_run_for_solver(x0=x, args=args)
+                dists_m = model_run_for_solver(x0=x, args=args, executor=executor)
                 output.append({
                     'chem_mix': row['chem_mix'],
+                    'temp_deg_c': row['temp_c'],
                     'parameter_to_vary' : parameter_to_vary,
                     'parameter_value': x,
                     'moderate_dist_m': dists_m[cd.CAT_MODERATE],
@@ -169,8 +185,18 @@ def get_sensitivity_around_init_values(row):
 
 def main():
     # output = []
-    for _, row in test_cases_df.iterrows():
-        get_sensitivity_around_init_values(row)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+        for _, row in test_cases_df.iterrows():
+            output = get_sensitivity_around_init_values(row, executor)
+            if len(output) == 0:
+                continue
+            try:
+                with open('sensitivity_output_last_try.csv', 'a', newline='') as csv_file:
+                    writer = csv.DictWriter(f=csv_file, fieldnames=list(output[-1].keys()))
+                    writer.writerows(output)
+                    output = []
+            except Exception as e:
+                print(f"Could not write results to file.  Will attempt to write next time.  \ncurrent results in buffer: \n{output}")
         
 if __name__ == '__main__':
     main()
