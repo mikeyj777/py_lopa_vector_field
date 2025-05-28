@@ -17,36 +17,59 @@ test_cases_df = pd.read_csv('heuristing_testing_output.csv')
 
 moderate_conc_ppm = 1000  # test cases run for chemicals with ERPG-3 at 1000 ppm
 
+def multiplier(var_in, factor, inverse = False):
+    ans = var_in * factor
+    if inverse:
+        ans = var_in / factor
+    return ans
+
+def adder(var_in, factor, inverse = False):
+    ans = var_in + factor
+    if inverse:
+        ans = var_in - factor
+    return ans
+
 starting_inputs_list = [
     {   
         'parameter': 'storage_mass_kg',
         'initial_value': 10000 / 2.2,
         'lower_bound': 10,
         'upper_bound': 10000000,
+        'increment_operation': multiplier,
+        'increment_factor': 1.1,
     },
     {   
         'parameter' : 'pressure_psig',
         'initial_value' : 100,
         'lower_bound' : 0.1,
         'upper_bound' : 1000,
+        'increment_operation': multiplier,
+        'increment_factor': 1.1,
     },
     {   
         'parameter' : 'release_elevation_m',
         'initial_value': 0,
         'lower_bound' : 0,
         'upper_bound' : 20,
+        'increment_operation': adder,
+        'increment_factor': 1,
     },
     {   
         'parameter': 'max_hole_size_in',
         'initial_value' : 5,
         'lower_bound' : 0.1,
         'upper_bound' : 50,
+        'increment_operation': multiplier,
+        'increment_factor': 1.1,
+
     },
     {
-        'parameter' : 'temp_deg_c',
+        'parameter' : 'temp_deg_k',
         'initial_value' : None,
-        'lower_bound' : -150,
-        'upper_bound' : 800
+        'lower_bound' : -150+273.15,
+        'upper_bound' : 800+273.15,
+        'increment_operation': multiplier,
+        'increment_factor': 1.1,
     }
 ]
 
@@ -62,10 +85,13 @@ def get_m_io(row):
     m_io.inputs['flash_fire'] = False
     m_io.inputs['bldg_hts_low_med_high'] = [0,0,0]
     for starting_input_dict in starting_inputs_list:
+        adding_factor = 0
         param = starting_input_dict['parameter']
-        if param == 'temp_deg_c':
-            starting_input_dict['initial_value'] = helpers.get_data_from_pandas_series_element(row['temp_c'])
-        value = starting_input_dict['initial_value']
+        if param == 'temp_deg_k':
+            param = 'temp_deg_c'
+            adding_factor = -273.15
+            starting_input_dict['initial_value'] = helpers.get_data_from_pandas_series_element(row['temp_c']) + 273.15
+        value = starting_input_dict['initial_value'] + adding_factor
         
         m_io.inputs[param] = value
     
@@ -90,7 +116,11 @@ def model_run_for_solver(x0, args):
     row = args['row']
     m_io = get_m_io(row)
     target_category = args['target_category']
-    m_io.inputs[target_input] = x0
+    adding_factor = 0
+    if target_category == 'temp_deg_k':
+        target_category = 'temp_deg_c'
+        adding_factor = -273.15
+    m_io.inputs[target_input] = x0 + adding_factor
     res = m_io.run()
     if res != ResultCode.SUCCESS:
         return None
@@ -106,6 +136,7 @@ def solve_for_dists_at_concs(row):
         target_distance = targ_dists[target_category]
         args['target_category'] = target_category
         for parameter_data in starting_inputs_list:
+            args['parameter_data'] = parameter_data
             target_input = parameter_data['parameter']
             args['target_input'] = target_input
             x0 = parameter_data['initial_value']
