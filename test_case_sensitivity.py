@@ -34,7 +34,7 @@ starting_inputs_list = [
         'parameter': 'storage_mass_kg',
         'initial_value': 10000 / 2.2,
         'lower_bound': 10,
-        'upper_bound': 10000000,
+        'upper_bound': 10000,
         'increment_operation': multiplier,
         'increment_factor': 1.1,
     },
@@ -48,9 +48,9 @@ starting_inputs_list = [
     },
     {   
         'parameter' : 'release_elevation_m',
-        'initial_value': 0,
+        'initial_value': 3,
         'lower_bound' : 0,
-        'upper_bound' : 20,
+        'upper_bound' : 6,
         'increment_operation': adder,
         'increment_factor': 1,
     },
@@ -117,7 +117,7 @@ def model_run_for_solver(x0, args):
     m_io = get_m_io(row)
     target_category = args['target_category']
     adding_factor = 0
-    if target_category == 'temp_deg_k':
+    if target_input == 'temp_deg_k':
         target_category = 'temp_deg_c'
         adding_factor = -273.15
     m_io.inputs[target_input] = x0 + adding_factor
@@ -126,6 +126,39 @@ def model_run_for_solver(x0, args):
         return None
     dist_m = parse_m_io(m_io, target_category=target_category)
     return dist_m
+
+def get_sensitivity_around_init_values(row):
+    output = []
+    args = {
+        'row' : row,
+    }
+    for target_category in targ_dists.keys():
+        args['target_category'] = target_category
+        for parameter_data in starting_inputs_list:
+            args['parameter_data'] = parameter_data
+            target_input = parameter_data['parameter']
+            args['target_input'] = target_input
+            increment_operation = parameter_data['increment_operation']
+            increment_factor = parameter_data['increment_factor']
+            x0 = parameter_data['initial_value']
+            xhigh = increment_operation(x0, increment_factor)
+            xlow = increment_operation(x0, increment_factor, inverse = True)
+        
+            for x in [xlow, x0, xhigh]:
+                try:
+                    dist_m = model_run_for_solver(x0=x, args=args)
+                    output.append({
+                        'chem_mix': row['chem_mix'],
+                        'target_category': target_category,
+                        'target_input' : target_input,
+                        'input': x,
+                        'value': dist_m,
+                    })
+                    print(output)
+                except Exception as e:
+                        print(f"{row['chem_mix']} could not be solved for {target_category} over {target_input} at {x}.  Error: {e.args} ")
+                        continue
+    return output
 
 def solve_for_dists_at_concs(row):
     output = []
@@ -163,7 +196,7 @@ def solve_for_dists_at_concs(row):
 def main():
     output = []
     for _, row in test_cases_df.iterrows():
-        chem_results = solve_for_dists_at_concs(row)
+        chem_results = get_sensitivity_around_init_values(row)
         output.extend(chem_results)
         if len(output) == 0:
             continue

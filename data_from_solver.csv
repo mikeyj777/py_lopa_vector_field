@@ -1198,3 +1198,395 @@ serious_impact_area_m2                179.71
 moderate_impact_distance_m              96.5
 moderate_impact_area_m2              2834.34
 Name: 2, dtype: object",serious,storage_mass_kg,10,,1-nitropropane
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'storage_mass_kg', 'initial_value': 4545.454545454545, 'lower_bound': 10, 'upper_bound': 10000, 'increment_operation': <function multiplier at 0x00000245C4F979C0>, 'increment_factor': 1.1}",storage_mass_kg,10,,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'storage_mass_kg', 'initial_value': 4545.454545454545, 'lower_bound': 10, 'upper_bound': 10000, 'increment_operation': <function multiplier at 0x00000245C4F979C0>, 'increment_factor': 1.1}",storage_mass_kg,10000,98.38401771431555,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'storage_mass_kg', 'initial_value': 4545.454545454545, 'lower_bound': 10, 'upper_bound': 10000, 'increment_operation': <function multiplier at 0x00000245C4F979C0>, 'increment_factor': 1.1}",storage_mass_kg,10,,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'storage_mass_kg', 'initial_value': 4545.454545454545, 'lower_bound': 10, 'upper_bound': 10000, 'increment_operation': <function multiplier at 0x00000245C4F979C0>, 'increment_factor': 1.1}",storage_mass_kg,10000,98.38401771431555,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x00000245C4F979C0>, 'increment_factor': 1.1}",pressure_psig,0.1,66.27497621272826,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x00000245C4F979C0>, 'increment_factor': 1.1}",pressure_psig,1000,68.26885882967727,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x00000245C4F979C0>, 'increment_factor': 1.1}",pressure_psig,1100.0,68.27682998856878,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'storage_mass_kg', 'initial_value': 4545.454545454545, 'lower_bound': 10, 'upper_bound': 10000, 'increment_operation': <function multiplier at 0x000001961C0079C0>, 'increment_factor': 1.1}",storage_mass_kg,10,,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'storage_mass_kg', 'initial_value': 4545.454545454545, 'lower_bound': 10, 'upper_bound': 10000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",storage_mass_kg,10,,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'storage_mass_kg', 'initial_value': 4545.454545454545, 'lower_bound': 10, 'upper_bound': 10000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",storage_mass_kg,10000,98.38401771431555,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'storage_mass_kg', 'initial_value': 4545.454545454545, 'lower_bound': 10, 'upper_bound': 10000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",storage_mass_kg,10,,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'storage_mass_kg', 'initial_value': 4545.454545454545, 'lower_bound': 10, 'upper_bound': 10000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",storage_mass_kg,10000,98.38401771431555,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,0.1,66.27497621272826,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,1000,68.26885882967727,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,1100.0,68.27682998856878,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,1210.0,68.27210137721417,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,1331.0,68.26173103434002,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,1464.1000000000001,68.26299786694332,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,1610.5100000000002,68.25790183372304,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,1771.5610000000004,67.2005771302241,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,1948.7171000000005,67.19869194218882,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,2143.5888100000006,67.19505691093003,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,2357.9476910000008,67.19220530901029,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,2593.742460100001,67.196565072325,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,2853.1167061100014,67.19423835613037,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,3138.4283767210018,67.15800224728707,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,3452.271214393102,67.18785809140817,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,3797.4983358324125,67.17893481867137,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,4177.248169415654,66.13679260262191,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,4594.97298635722,66.1263523976285,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,5054.470284992943,66.11942432903581,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,5559.917313492238,66.11526940112,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,6115.909044841462,66.10790765443542,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,6727.499949325608,66.12455355111551,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,7400.249944258169,66.11602122657024,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,8140.274938683987,66.12089312551646,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,8954.302432552386,65.05526563826024,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,9849.732675807625,65.06270390866467,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,10834.705943388388,65.06280888620321,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,11918.176537727228,65.07065493255752,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,13109.99419149995,65.0603486050903,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,14420.993610649946,64.03145869381628,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,15863.092971714943,63.978305600871394,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,17449.40226888644,64.0236462894196,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,19194.342495775083,64.03140469816773,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,21113.776745352592,64.02162172459032,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,23225.154419887855,64.00022412143741,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,25547.669861876642,63.004260601192925,acetaldehyde
+"chem_mix                      acetaldehyde
+nbp_deg_c                             21.0
+temp_c                                21.0
+serious_impact_distance_m            98.39
+serious_impact_area_m2            20310.78
+moderate_impact_distance_m          449.64
+moderate_impact_area_m2          122481.04
+Name: 0, dtype: object",serious,"{'parameter': 'pressure_psig', 'initial_value': 100, 'lower_bound': 0.1, 'upper_bound': 1000, 'increment_operation': <function multiplier at 0x000001D3CA32CE00>, 'increment_factor': 1.1}",pressure_psig,28102.43684806431,63.002661804754545,acetaldehyde
