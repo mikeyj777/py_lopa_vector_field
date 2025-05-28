@@ -158,6 +158,14 @@ def get_sensitivity_around_init_values(row):
                 except Exception as e:
                         print(f"{row['chem_mix']} could not be solved for {target_category} over {target_input} at {x}.  Error: {e.args} ")
                         continue
+                
+                try:
+                    with open('sensitivity_output.csv', 'a', newline='') as csv_file:
+                        writer = csv.DictWriter(f=csv_file, fieldnames=list(output[-1].keys()))
+                        writer.writerows(output)
+                        output = []
+                except Exception as e:
+                    print(f"Could not write results to file.  Will attempt to write next time.  \ncurrent results in buffer: \n{output}")
     return output
 
 def solve_for_dists_at_concs(row):
@@ -191,22 +199,23 @@ def solve_for_dists_at_concs(row):
             except Exception as e:
                 print(f"{row['chem_mix']} could not be solved for {target_category} over {target_input}.  Error: {e.args} ")
                 continue
+
     return output
 
 def main():
-    output = []
+    # output = []
     for _, row in test_cases_df.iterrows():
-        chem_results = get_sensitivity_around_init_values(row)
-        output.extend(chem_results)
-        if len(output) == 0:
-            continue
-        try:
-            with open('sensitivity_output.csv', 'a', newline='') as csv_file:
-                writer = csv.DictWriter(f=csv_file, fieldnames=list(chem_results[-1].keys()))
-                writer.writerows(output)
-                output = []
-        except Exception as e:
-            print(f"Could not write results to file.  Will attempt to write next time.  \ncurrent results in buffer: \n{output}")
+        get_sensitivity_around_init_values(row)
+        # output.extend(chem_results)
+        # if len(output) == 0:
+        #     continue
+        # try:
+        #     with open('sensitivity_output.csv', 'a', newline='') as csv_file:
+        #         writer = csv.DictWriter(f=csv_file, fieldnames=list(chem_results[-1].keys()))
+        #         writer.writerows(output)
+        #         output = []
+        # except Exception as e:
+        #     print(f"Could not write results to file.  Will attempt to write next time.  \ncurrent results in buffer: \n{output}")
 
 if __name__ == '__main__':
     main()
